@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# change output on different iterations
+a=1
+
+while [ $a -lt 10 ]
+do
+    if [ $a -eq 4 ]
+    then
+	echo "bad luck"
+	(( a++ ))
+    elif [ $a -eq 8 ]
+    then
+	echo "good luck"
+	(( a++ ))
+    else
+	echo "Holberton School"
+	(( a++ ))
+    fi
+done
