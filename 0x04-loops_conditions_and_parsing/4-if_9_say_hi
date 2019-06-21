@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# bash script that display diff on 9th iteration
+a=0
+
+while [ $a -lt 10 ]
+do
+    echo "Holberton School"
+    (( a++ ))
+    if [ $a -eq 9 ] 
+    then
+	echo "Holberton School"
+	echo "Hi"
+    fi
+done
+	
