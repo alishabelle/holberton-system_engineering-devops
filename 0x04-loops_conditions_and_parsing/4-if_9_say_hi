@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bash script that display diff on 9th iteration
-a=0
+a=1
 
 while [ $a -lt 10 ]
 do
