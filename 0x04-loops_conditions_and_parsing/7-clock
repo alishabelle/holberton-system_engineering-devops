@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# clock function
 hr=0
 min=1
 
