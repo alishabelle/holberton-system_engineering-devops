@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#edits file to change ip address
+
+cp /etc/hosts ~/thottys | grep -vx '127.*localhost' /etc/hosts > /tmp/holdup
+echo '127.0.0.2 localhost' > ~/thottys
+echo '8.8.8.8 facebook.com' >> ~
+cat /tmp/holdup >> ~/thottys
+cp ~/thottys /etc/hosts
+rm ~/thottys
+rm /tmp/holdup
