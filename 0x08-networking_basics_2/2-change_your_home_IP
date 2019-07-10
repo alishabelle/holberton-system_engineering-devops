@@ -3,7 +3,7 @@
 
 cp /etc/hosts ~/thottys | grep -vx '127.*localhost' /etc/hosts > /tmp/holdup
 echo '127.0.0.2 localhost' > ~/thottys
-echo '8.8.8.8 facebook.com' >> ~
+echo '8.8.8.8 facebook.com' >> ~/thottys
 cat /tmp/holdup >> ~/thottys
 cp ~/thottys /etc/hosts
 rm ~/thottys
