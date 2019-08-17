@@ -2,7 +2,5 @@
 # configure custom http header
 apt-get update
 apt-get install -y nginx
-host=$(hostname)
-sed -i "36 i\ \tadd_header X-Served-By $host;\n" /etc/nginx/sites-enabled/default
-service nginx reload
+sudo sed -i "26i add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
 service nginx restart
