@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#configure HAproxy
+apt-get update
+apt-get install -y haproxy
+sed -i "s/ENABLED=0/ENABLED=1/g" /etc/default/haproxy
+sed -i "\$ a\listen 669-lb-01\n\tbind *:80\n\tmode http\n\tstats enable\n\tbalance roundrobin\n\tserver 669-web-01 35.196.49.221 check\n\tserver 669-web-02 35.237.111.160 check" /etc/haproxy/haproxy.cfg
+service haproxy start
