@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configure server
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo nginx -t && sudo service nginx reload
