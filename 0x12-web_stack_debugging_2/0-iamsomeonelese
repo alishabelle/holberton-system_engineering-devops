@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#accepts argument and run whoami command by diff user
+sudo -u "$1" whoami
