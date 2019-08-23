@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #less than 7
-sudo -u "$1" whoami
+pkill apache2
+sudo -u nginx service nginx start
