@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# redirection to a different page
+
+
+apt-get -y update
+apt-get -y install nginx
+mkdir --p /var/www/html
+echo 'Holberton School' > /var/www/html/index.html
+service nginx restart
+string="server_name _;\n\tlocation /redirect_me {\n\t\treturn 301 https://www.netflix.com;\n\t}\n"
+sed -i "s,server_name _;,$string," /etc/nginx/sites-available/default
+service nginx restart
