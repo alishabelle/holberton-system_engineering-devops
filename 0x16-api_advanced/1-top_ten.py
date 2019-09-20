@@ -12,5 +12,6 @@ def top_ten(subreddit):
     if resp.status_code >= 300:
         print(None)
     else:
-        for r in resp.json().get('data').get('children'):
+        resp = resp.json().get('data').get('children')
+        for r in resp:
             print(r.get('data').get('title'))
