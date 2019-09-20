@@ -7,7 +7,7 @@ import requests
 def top_ten(subreddit):
     """ prints first 10 posts """
     head = {'User-Agent': 'jank'}
-    url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
     resp = requests.get(url, allow_redirects=False, headers=head)
     if resp.status_code >= 300:
         print(None)
